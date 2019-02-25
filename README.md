@@ -5,7 +5,7 @@
 
 To quickly get started running a Bamboo instance, use the following command:
 ```bash
-docker run --detach --publish 8085:8085 babim/bamboo:latest
+docker run --detach --publish 8085:8085 babim/bamboo:fixed
 ```
 ```
 volume:
