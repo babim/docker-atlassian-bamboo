@@ -1,9 +1,9 @@
-FROM openjdk:11
+FROM openjdk:8
 
 # Configuration variables.
 ENV SOFT		bamboo
 #ENV SOFTSUB		core
-ENV OPENJDKV		11
+ENV OPENJDKV		8
 ENV BAMBOO_VERSION	7.0.3
 ENV BAMBOO_HOME		/var/atlassian/${SOFT}
 ENV BAMBOO_INSTALL	/opt/atlassian/${SOFT}
