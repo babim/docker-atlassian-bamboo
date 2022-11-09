@@ -4,7 +4,7 @@ FROM adoptopenjdk/openjdk8:alpine
 ENV SOFT		bamboo
 #ENV SOFTSUB		core
 ENV OPENJDKV		8
-ENV BAMBOO_VERSION	8.2.4
+ENV BAMBOO_VERSION	9.0.1
 ENV BAMBOO_HOME		/var/atlassian/${SOFT}
 ENV BAMBOO_INSTALL	/opt/atlassian/${SOFT}
 ENV SOFT_HOME		${BAMBOO_HOME}
