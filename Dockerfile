@@ -1,10 +1,10 @@
-FROM adoptopenjdk/openjdk8:debian-slim
+FROM eclipse-temurin:17-noble
 
 # Configuration variables.
-ENV SOFT		bamboo
+ENV SOFT			bamboo
 #ENV SOFTSUB		core
-ENV OPENJDKV		8
-ENV BAMBOO_VERSION	9.0.1
+ENV OPENJDKV		17
+ENV BAMBOO_VERSION	10.0.1
 ENV BAMBOO_HOME		/var/atlassian/${SOFT}
 ENV BAMBOO_INSTALL	/opt/atlassian/${SOFT}
 ENV SOFT_HOME		${BAMBOO_HOME}
@@ -44,7 +44,8 @@ VOLUME ["${SOFT_HOME}", "${SOFT_INSTALL}"]
 # Set the default working directory as the installation directory.
 WORKDIR ${SOFT_HOME}
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/bin/tini", "--"]
 
 # Run Atlassian as a foreground process by default.
 #CMD ["/opt/atlassian/bamboo/bin/start-bamboo.sh", "-fg"]
