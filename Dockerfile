@@ -1,10 +1,10 @@
-FROM eclipse-temurin:11-alpine
+FROM eclipse-temurin:17-alpine
 
 # Configuration variables.
 ENV SOFT			bamboo
 #ENV SOFTSUB		core
-ENV OPENJDKV		11
-ENV BAMBOO_VERSION	9.3.6
+ENV OPENJDKV		17
+ENV BAMBOO_VERSION	9.4.0
 ENV BAMBOO_HOME		/var/atlassian/${SOFT}
 ENV BAMBOO_INSTALL	/opt/atlassian/${SOFT}
 ENV SOFT_HOME		${BAMBOO_HOME}
